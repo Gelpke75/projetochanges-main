@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-configuracao',
   templateUrl: './configuracao.page.html',
@@ -8,12 +10,16 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ConfiguracaoPage implements OnInit {
 
-  enableNotifications: boolean = false;
-  selectedLanguage: string = 'en'; // Valor padrão para o idioma
+  selectedLanguage = 'pt'; // Defina o idioma padrão ou um idioma inicial
 
-  constructor(public apiService : ApiService) {}
+  enableNotifications: boolean = false;
+
+  changeLanguage() {
+    this.translate.use(this.selectedLanguage);
+  }
+  constructor(public apiService : ApiService,private translate: TranslateService) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  
   }
 
   saveSettings() {
