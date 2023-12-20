@@ -2,8 +2,33 @@
 span{
 
   text-align: center;
+  margin-top: 5%;
+}
+
+
+
+#smart{
+margin-top: -11.5%;
 }
 
 #imag{
-margin-top: 15%;
+  margin-top: 5%;
 }
+
+img{
+  margin-top: -10%;
+}
+
+
+.half-half-button {
+  background: linear-gradient(-223deg, blue 45%, orange 55%) no-repeat;  border: none;
+  color: white;
+  padding: 10px 20px; /* Ajuste conforme necessário */
+  font-size: 16px; /* Ajuste conforme necessário */
+  cursor: pointer;
+  transition: background 0.3s ease; /* Efeito de transição suave */
+}
+
+
+
+
